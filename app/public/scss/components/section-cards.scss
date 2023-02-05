@@ -1,0 +1,33 @@
+@media(min-width:$widthS){
+    .section-cards{
+        @include flex-column;
+        align-self: center;
+        padding: 0px $padding-xl 0 $padding-xl;
+        width: 100%;
+        align-items: center;
+
+        .section-title{
+            margin-bottom: $margin-xl;
+        }
+        .section-title::before, .section-title::after{
+            display: inline-block;
+            @include content-img;
+            width: 28px;
+            height: 14px;
+        }
+        .section-title::before{
+            margin-right: $margin-xs;
+            background-image: url(../images/list-blue-left.svg);
+        }
+        .section-title::after{
+            margin-left: $margin-xs;
+            background-image: url(../images/list-blue-right.svg);
+        }
+
+    }
+}
+@media(min-width:$widthL){
+    .section-cards{
+        padding: 0;
+    }
+}

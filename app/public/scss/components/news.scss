@@ -1,0 +1,13 @@
+@media(min-width:$widthS){
+    .wrapper{
+        @include wrapper;
+
+        .header::after{
+            content: "";
+        }
+        .footer::before{
+            content: ""
+        }
+    }
+}
+

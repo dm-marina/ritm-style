@@ -1,0 +1,74 @@
+@media(min-width:$widthS){
+    .swipe-cards{
+       @include flex-column;
+       width: 100%;
+       align-items: center;
+
+       .swipe-card-container{
+        @include flex-row;
+        justify-content: space-around;
+        align-items: center;
+
+        .swipe-card{
+            @include flex-column;
+            background-color: $color-add;
+            border-radius: 10px;
+            padding: $margin-s $margin-l;
+            .simple-text{
+                margin-bottom: $padding-m;
+            }
+        }
+        .disabled-card{
+            opacity: 0.4;
+            display: none;
+        }
+        .active-card{
+            opacity: unset;
+            display: flex;
+        }
+       }
+       .swipe-container{
+            @include flex-row;
+            justify-content: space-between;
+            margin-top: $margin-m;
+            width: 100%;
+            max-width: 124px;
+
+        .swipe-btn{
+            width: $swipe-btn-width-height;
+            height: $swipe-btn-width-height;
+            background-color: $color-light;
+            border-radius: 3px;
+            border: none;
+        }
+        .disabled-swipe-btn{
+            opacity: 0.4;
+        }
+       }
+
+    }
+}
+@media(min-width:$widthL){
+    .swipe-cards{
+        max-width: 1736p;
+        .swipe-card-container{
+            width: 100%;
+
+            .swipe-card{
+                display: flex;
+                width: 30%;
+
+                .disabled-card{
+                    opacity: 0.4;
+                    order:unset;
+                    display: flex;
+                }
+                .active-card{
+                    // order: 0;
+                    opacity: unset;
+                    display: flex;
+                }
+            }
+        }
+    }
+}

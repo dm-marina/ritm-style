@@ -1,0 +1,55 @@
+.content-text, .title, .section-title, .card-text, 
+.simple-text, .card-text-mini{
+    font-family: 'El-Messiri';
+}
+.link{
+    @include no-link;
+    font-size: $text-size-xxs;
+    font-family: 'Proxima-Nova';
+}
+.content-text{
+    font-size: $text-size-xl;
+}
+
+.title{
+    font-size: $text-size-xxxl;
+}
+
+.card-text{
+   @include no-link;
+   font-size: $text-size-xl;
+}
+
+.section-title{
+    font-size: $text-size-xxl;
+    align-self: center;
+}
+
+.simple-text{
+    font-size: $text-size-m;
+}
+
+.small-text{
+    font-size: $text-size-xxs;
+}
+.date{
+    font-size: $text-size-xxs;
+    border-radius: 5px;
+    background-color: $color-add;
+    align-self: flex-start;
+    padding: $padding-date-s $padding-date-m;
+
+}
+
+.text{
+    font-size: $text-size-xs;
+}
+
+.procedure-text{
+    font-size: $text-size-s;
+}
+.card-text-mini{
+    font-size: $text-size-l;
+    @include no-link;
+}
+

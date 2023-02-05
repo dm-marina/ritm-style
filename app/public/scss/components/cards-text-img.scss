@@ -1,0 +1,112 @@
+@media(min-width:$widthS){
+    .cards-text-img{
+        width: 100%;
+        @include flex-column;
+        justify-content: space-between;
+
+        .border-text-img{
+            @include flex-column;
+            border: 2px solid $color-add;
+            border-radius: 20px;
+            margin-bottom: $margin-xs;
+            padding: $margin-s $margin-m;
+            margin-bottom: $margin-xl;
+        }
+        .card-text-img{
+            @include flex-column;
+            justify-content: space-between;
+
+            .card-content{
+                .content-text{
+                    font-weight: bold;
+                }
+                .procedure{
+                    @include flex-row;
+                    justify-content: space-between;
+                    margin-bottom: $padding-xl;
+                    .list::before{
+                        display: inline-block;
+                        @include content-img;
+                        background-image: url(../images/list-blue-left.svg);
+                        width: $list-width;
+                        height: $list-height;
+                        margin-right: $padding-m;
+                    }
+
+                }
+                .procedure:last-child{
+                    margin-bottom: 0;
+                } 
+                .date{
+                    margin-bottom: $margin-xs;
+                }
+                .text{
+                    margin-top: $padding-xl;
+                    margin-bottom: $padding-xxxl;
+                }
+                .btn{
+                    align-self: center;
+                    background-color: $color-add;
+                    color: $color-light;
+                }
+            }
+            .card-content:nth-child(2){
+                @include flex-column;
+                .simple-text{
+                    margin-top: $padding-xl;
+                    align-self: center;
+                }
+                    .text-img{
+                        width: 100%;
+                        height: 400px;
+                    }
+                    .cost::before{
+                        display: inline-block;
+                        @include content-img;
+                        width: 100%;
+                        height: 400px;
+                        border-radius: 10px;
+                        background-image: url(../images/setrificate.svg);
+                    }
+            }
+            .text-img{
+                width: 100%;
+                height: 400px;
+            }
+            .new-format::before{
+                display: inline-block;
+                @include content-img;
+                width: 100%;
+                height: 400px;
+                border-radius: 10px;
+            }
+            .new-format::before{
+                background-image: url(../images/new.svg);
+            }
+            
+        }
+    }
+}
+@media(min-width:$widthL){
+    .cards-text-img{
+        max-width: 1076px;
+        .card-text-img{
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 0;
+
+            .card-content{
+                width: 45%;
+                margin-bottom: 0;
+
+                .procedure{
+                    margin-bottom: 0;
+                }
+            }
+            .text-img{
+                width: 45%;
+            }
+        }
+
+    }
+}

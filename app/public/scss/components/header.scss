@@ -1,0 +1,44 @@
+@media(min-width:$widthS){
+    .header{
+        margin-top: $padding-xl;
+        @include flex-column;
+        justify-content: stretch;
+        align-self: stretch;
+
+        .header-container{
+            @include flex-row;
+            justify-content: space-around;
+
+            .menu{
+                @include flex-column;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+            .btn{
+                background-color: $color-add;
+                color: $color-light;
+                align-self: center;
+            }
+        }
+    }
+    header::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $color-light;
+        margin-top: $padding-xl;
+    }
+}
+@media(min-width:$widthM){
+    .header{
+        .header-container{
+            .menu{
+                max-width: 655px;
+                width: 100%;
+                flex-direction: row;
+            }
+        }
+    }
+}

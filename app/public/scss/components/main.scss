@@ -1,0 +1,170 @@
+@media(min-width:$widthS){
+    .wrapper{
+        @include wrapper;
+        .header::after{
+            content: none;
+        }
+
+        .main{
+            margin-top: $margin-s;
+            background:linear-gradient(0deg, rgba(152, 201, 220, 0.5), rgba(152, 201, 220, 0.5)), url(../images/main-bg.svg);
+            @include img;
+            @include flex-column;
+            height: 100vh;
+            border-radius: 10px;
+            width: 100%;
+            align-self: center;
+            justify-content: center;
+
+            padding: 0px $padding-xl;
+
+            .content{
+                @include flex-column;
+                justify-content: center;
+                align-self: center;
+                text-align: center;
+
+                .content-text{
+                    margin-bottom: $padding-xxxl;
+                    font-size: $text-size-xl;
+                }
+                .content-text::before, .content-text::after{
+                    display: inline-block;
+                    width: $list-width;
+                    height: $list-height;
+                    @include content-img;
+                }
+                .content-text::before{
+                    background-image: url(../images/list-white-left.svg);
+                    margin-right: $padding-xl;
+                }
+                .content-text::after{
+                    background-image: url(../images/list-white-right.svg);
+                    margin-left: $padding-xl;
+                }
+                .title{
+                    font-size: $text-size-xxl;
+                }
+            }
+        }
+        .section-cards{
+            margin-top: $margin-xxxl;
+        }
+        .contacts{
+            width: 100%;
+            padding: 0px $padding-xl 0 $padding-xl;
+            @include flex-column;
+            justify-content: space-between;
+            margin-top: $margin-xxxl;
+
+            .map{
+                width: 100%;
+                height: 604px;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .small-cards{
+                @include flex-column;
+                justify-content: space-between;
+                .small-card{
+                    @include flex-column;
+                    align-self: stretch;
+                    justify-content: space-between;
+                    padding: $padding-xxl $margin-xs;
+                    background-color: $color-add;
+                    border-radius: 10px;
+
+                    .content-text, .contact{
+                        margin-bottom: $padding-m;
+                    }
+                    .small-text{
+                        margin-bottom: $padding-xl;
+                    }
+
+                    .contact{
+                        @include no-link;
+                        font-size: $text-size-xxs;
+                    }
+                    .addr::before, .metro::before, .book::before{
+                        @include content-img;
+                        display: inline-block;
+                        margin-right: $padding-m; 
+                        width: $contact;
+                        height: $contact; 
+                    }
+                    .addr::before{
+                        background-image: url(../images/location.svg);
+                    }
+                    .metro::before{
+                        height: 16px;
+                        background-image: url(../images/metro.svg);
+                    }
+                    .book::before{
+                        background-image: url(../images/booking.svg);
+                    }
+
+                    .btn{
+                        background-color: $color-light;
+                        color: $color-add;
+                        align-self: center;
+                    }
+                }
+                .small-card:nth-child(1){
+                    margin-bottom: $padding-l;
+                }
+            }
+        }
+        .footer{
+            margin-top: $margin-l;
+        }
+        .footer::before{
+            content: none;
+        }
+    }
+}
+@media(min-width:$widthM){
+    .wrapper{
+        .main{
+            max-width: 1296px;
+            padding: 0;
+
+            .content{
+                .content-text{
+                    font-size: $text-size-xxl;
+                }
+                .content-text::before{
+                    margin-right: $margin-m;
+                }
+                .content-text::after{
+                    margin-left: $margin-m;
+                }
+                .title{
+                    font-size: $text-size-xxxl;
+                }
+            }
+        }
+    }
+}
+@media(min-width:$widthL){
+    .wrapper{
+        .contacts{
+            padding: 0;
+            max-width: 1296px;
+            flex-direction: row;
+            .map{
+                img{
+                    max-width: 856px;
+                }
+            }
+            .small-cards{
+                width: 40%;
+            }
+            
+        }
+        .section-cards{
+            margin-top: $margin-xxxl;
+        }
+    }
+}

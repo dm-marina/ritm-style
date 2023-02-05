@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $color-light;
+    font-family: 'Proxima-Nova';
+}
+
+
+.logo{
+    position: relative;
+    a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .logo-img{
+        width: $logo-width-height;
+        height: $logo-width-height;
+    }
+}
+
+.btn{
+    padding: $padding-xs $padding-s;
+    font-size: $text-size-xxs;
+    border: none;
+    border-radius: 3px;
+}
+button{
+    cursor: pointer;
+}
+
+.card-content{
+    @include flex-column;
+    align-self: stretch;
+    justify-content: space-evenly;
+    margin-bottom: $padding-s;
+}
+
+@font-face {
+    font-family: 'El-Messiri';
+    src: url(../fonts/ElMessiri/ElMessiri-Regular.ttf);
+}
+@font-face{
+    font-family: 'Proxima-Nova';
+    src: url(../fonts/ProximaNova/proximanova_regular.ttf);
+}

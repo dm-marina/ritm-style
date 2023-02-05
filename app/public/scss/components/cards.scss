@@ -1,0 +1,64 @@
+@media(min-width:$widthS){
+    .cards{
+        @include flex-column;
+        justify-content: space-between;
+        align-self: stretch;
+
+        .card{
+            @include flex-column;
+            width: 100%;
+            height: 258px;
+            justify-content: flex-end;
+            align-items: center;
+            padding: $padding-xl $padding-xxxl $padding-xl $padding-xxxl;
+            margin-bottom: $padding-l;
+
+        }
+        .card-container-main, .card-container{
+            @include flex-column;
+            justify-content: space-between;
+        }
+        .ritm-img{
+            background-image: url(../images/seanses.svg);
+            @include img;
+            border-radius: 10px;
+        }
+    }
+}
+@media(min-width:$widthM){
+    .cards{
+        align-self: center;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1296px;
+        width: 100%;
+        .card{
+            width: 30%;
+            justify-content: space-between;
+        }
+        .card-container-main{
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            .card{
+                width: 29%;
+                height: 540px;
+            }
+
+            .card-container{
+                width: 70%;
+                flex-direction: row;
+                flex-wrap: wrap;
+    
+                .card{
+                    width: 49%;
+                    height: 258px;
+                }
+            }
+        }
+        .card:nth-child(4),.card:nth-child(5), .card:nth-child(6){
+            margin-bottom: 0;
+        }
+    }
+}
